@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:mygetxtemplate/modules/global_binding.dart';
+import 'package:mygetxtemplate/modules/home/home_page.dart';
 import 'package:mygetxtemplate/modules/initial/initial_page.dart';
 import 'package:mygetxtemplate/modules/login/login_page.dart';
 import 'package:mygetxtemplate/modules/registration/registration_page.dart';
@@ -20,6 +21,11 @@ abstract class AppPages {
     GetPage(
       name: Routes.REGISTRATION,
       page: () => RegistrationPage(),
+      binding: GlobalBinding(),
+    ),
+    GetPage(
+      name: Routes.HOME,
+      page: () => HomePage(),
       binding: GlobalBinding(),
     ),
   ];

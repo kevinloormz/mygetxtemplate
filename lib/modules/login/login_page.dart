@@ -11,6 +11,7 @@ class LoginPage extends GetWidget<LoginController> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextField(
+          controller: controller.email,
           decoration: InputDecoration(
               hintText: 'Usuario',
               border: InputBorder.none,
@@ -19,6 +20,7 @@ class LoginPage extends GetWidget<LoginController> {
         ),
         SizedBox(height: 20),
         TextField(
+          controller: controller.pass,
           decoration: InputDecoration(
               hintText: 'Contraseña',
               border: InputBorder.none,
@@ -27,7 +29,12 @@ class LoginPage extends GetWidget<LoginController> {
           obscureText: true,
         ),
         SizedBox(height: 20),
-        ElevatedButton(onPressed: () {}, child: Text('Iniciar'))
+        ElevatedButton(
+            onPressed: () {
+              controller.emailLogin();
+              //controller.setInitialScreen();
+            },
+            child: Text('Iniciar'))
       ],
     ));
   }
