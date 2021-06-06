@@ -10,7 +10,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: Routes.INITIAL,
     // theme: appThemeData,
-    defaultTransition: Transition.fade,
+    defaultTransition: Transition.cupertino,
     initialBinding: GlobalBinding(),
     getPages: AppPages.pages,
     home: InitialPage(),
