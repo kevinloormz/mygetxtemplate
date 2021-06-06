@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mygetxtemplate/modules/registration/registration_controller.dart';
 
-import 'login_controller.dart';
-
-class LoginPage extends GetWidget<LoginController> {
+class RegistrationPage extends GetView<RegistrationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +11,15 @@ class LoginPage extends GetWidget<LoginController> {
       children: [
         TextField(
           decoration: InputDecoration(
-              hintText: 'Usuario',
+              hintText: 'Nombres',
+              border: InputBorder.none,
+              fillColor: Color(0xfff3f3f4),
+              filled: true),
+        ),
+        SizedBox(height: 20),
+        TextField(
+          decoration: InputDecoration(
+              hintText: 'Email',
               border: InputBorder.none,
               fillColor: Color(0xfff3f3f4),
               filled: true),
@@ -27,7 +34,7 @@ class LoginPage extends GetWidget<LoginController> {
           obscureText: true,
         ),
         SizedBox(height: 20),
-        ElevatedButton(onPressed: () {}, child: Text('Iniciar'))
+        ElevatedButton(onPressed: () {}, child: Text('Registrarse'))
       ],
     ));
   }

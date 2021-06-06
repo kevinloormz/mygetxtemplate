@@ -6,6 +6,7 @@ import 'package:mygetxtemplate/modules/initial/initial_page.dart';
 import 'routes/app_pages.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
     initialRoute: Routes.INITIAL,
