@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+//import 'package:mygetxtemplate/modules/login/login_controller.dart';
+import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
+//import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
 
-import 'login_controller.dart';
+//import 'login_controller.dart';
 
-class LoginPage extends GetWidget<LoginController> {
+class LoginPage extends GetWidget<LoginPruebaController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +34,7 @@ class LoginPage extends GetWidget<LoginController> {
         SizedBox(height: 20),
         ElevatedButton(
             onPressed: () {
-              controller.emailLogin();
+              controller.signInWithEmailAndPassword();
               //controller.setInitialScreen();
             },
             child: Text('Iniciar'))
