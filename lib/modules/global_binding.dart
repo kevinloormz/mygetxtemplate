@@ -2,16 +2,15 @@ import 'package:get/get.dart';
 import 'package:mygetxtemplate/modules/home/home_controller.dart';
 import 'package:mygetxtemplate/modules/initial/initial_controller.dart';
 import 'package:mygetxtemplate/modules/login/login_controller.dart';
-import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
+//import 'package:mygetxtemplate/modules/login/login_controller.dart';
 import 'package:mygetxtemplate/modules/registration/registration_controller.dart';
 
 class GlobalBinding implements Bindings {
   @override
   void dependencies() {
     Get.lazyPut<InitialController>(() => InitialController(), fenix: true);
-    Get.lazyPut<LoginController>(() => LoginController());
+    Get.lazyPut<LoginController>(() => LoginController(), fenix: true);
     Get.lazyPut<RegistrationController>(() => RegistrationController());
     Get.lazyPut<HomeController>(() => HomeController());
-    Get.lazyPut<LoginPruebaController>(() => LoginPruebaController());
   }
 }

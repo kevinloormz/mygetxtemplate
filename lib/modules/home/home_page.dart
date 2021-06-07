@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mygetxtemplate/modules/home/home_controller.dart';
-import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
+import 'package:mygetxtemplate/modules/login/login_controller.dart';
 
 class HomePage extends GetWidget<HomeController> {
   @override
@@ -11,7 +11,7 @@ class HomePage extends GetWidget<HomeController> {
       body: SafeArea(child: Text('HomeController')),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.find<LoginPruebaController>().logOut();
+          Get.find<LoginController>().logOut();
         },
       ),
     );

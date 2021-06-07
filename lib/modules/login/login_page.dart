@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 //import 'package:mygetxtemplate/modules/login/login_controller.dart';
-import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
+import 'package:mygetxtemplate/modules/login/login_controller.dart';
 //import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
 
 //import 'login_controller.dart';
 
-class LoginPage extends GetWidget<LoginPruebaController> {
+class LoginPage extends GetWidget<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,16 @@ class LoginPage extends GetWidget<LoginPruebaController> {
               controller.signInWithEmailAndPassword();
               //controller.setInitialScreen();
             },
-            child: Text('Iniciar'))
+            child: Text('Iniciar')),
+        SizedBox(height: 20),
+        TextButton(
+            onPressed: () {
+              controller.googleSignInAccount();
+            },
+            child: Text(
+              'Google',
+              style: TextStyle(color: Colors.red),
+            ))
       ],
     ));
   }
