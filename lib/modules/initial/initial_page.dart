@@ -3,9 +3,13 @@ import 'package:get/get.dart';
 
 import 'initial_controller.dart';
 
-class InitialPage extends GetView<InitialController> {
+class InitialPage extends GetWidget<InitialController> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('shop'),
+      ),
+    );
   }
 }
