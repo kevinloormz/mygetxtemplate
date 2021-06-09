@@ -7,6 +7,9 @@ class CustomTextStyle {
   var textStyleFourteenWithThemeColor = GoogleFonts.montserrat(
       fontSize: 14, color: CustomColor().primaryTextColor);
 
+  var textStyle16WithThemeColor = GoogleFonts.montserrat(
+      fontSize: 16, color: CustomColor().primaryTextColor);
+
   var textStyleTwelveWithGreyColor = GoogleFonts.montserrat(
       fontSize: 12, color: CustomColor().secondaryTextColor);
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mygetxtemplate/core/theme/custom_textStyle.dart';
+import 'package:mygetxtemplate/global_widgets/custom_text.dart';
 //import 'package:mygetxtemplate/modules/login/login_controller.dart';
 import 'package:mygetxtemplate/modules/login/login_controller.dart';
 //import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
@@ -16,7 +18,7 @@ class LoginPage extends GetWidget<LoginController> {
         TextField(
           controller: controller.email,
           decoration: InputDecoration(
-              hintText: 'Usuario',
+              hintText: 'Correo Electronico',
               border: InputBorder.none,
               // fillColor: Color(0xfff3f3f4),
               filled: true),
@@ -33,11 +35,20 @@ class LoginPage extends GetWidget<LoginController> {
         ),
         SizedBox(height: 20),
         ElevatedButton(
-            onPressed: () {
-              controller.signInWithEmailAndPassword();
-              //controller.setInitialScreen();
-            },
-            child: Text('Iniciar')),
+          onPressed: () {
+            controller.signInWithEmailAndPassword();
+            //controller.setInitialScreen();
+          },
+          child: CustomText(
+            data: 'Iniciar Sesión',
+            textStyle: CustomTextStyle().textStyle16WithThemeColor,
+          ),
+        ),
+        SizedBox(height: 20),
+        CustomText(
+          data: 'Puedes iniciar con',
+          textStyle: CustomTextStyle().textStyleTwelveWithGreyColor,
+        ),
         SizedBox(height: 20),
         TextButton(
             onPressed: () {
