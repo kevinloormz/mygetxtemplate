@@ -18,7 +18,7 @@ class LoginPage extends GetWidget<LoginController> {
           decoration: InputDecoration(
               hintText: 'Usuario',
               border: InputBorder.none,
-              fillColor: Color(0xfff3f3f4),
+              // fillColor: Color(0xfff3f3f4),
               filled: true),
         ),
         SizedBox(height: 20),
@@ -27,7 +27,7 @@ class LoginPage extends GetWidget<LoginController> {
           decoration: InputDecoration(
               hintText: 'Contraseña',
               border: InputBorder.none,
-              fillColor: Color(0xfff3f3f4),
+              // fillColor: Color(0xfff3f3f4),
               filled: true),
           obscureText: true,
         ),
