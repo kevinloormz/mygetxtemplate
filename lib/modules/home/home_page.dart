@@ -34,6 +34,14 @@ class HomePage extends GetWidget<HomeController> {
               onTap: () {
                 Get.find<LoginController>().logOut();
               },
+            ),
+            ListTile(
+              leading: Icon(Icons.switch_left),
+              title: Text('Modo oscuro'),
+              onTap: () {
+                Get.changeThemeMode(
+                    Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+              },
             )
           ],
         ),
