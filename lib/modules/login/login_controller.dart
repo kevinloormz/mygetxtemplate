@@ -81,10 +81,13 @@ class LoginController extends GetxController {
         Get.offAllNamed(Routes.HOME);
       } catch (e) {
         showSnackbarerror('Error login con cuenta Google');
+        await Future.delayed(Duration(seconds: 1));
+        dismissLoadingWidget();
       }
-      await Future.delayed(Duration(seconds: 1));
-      dismissLoadingWidget();
     }
+
+    await Future.delayed(Duration(seconds: 1));
+    dismissLoadingWidget();
 
     //dismissLoadingWidget();
     // Once signed in, return the UserCredential

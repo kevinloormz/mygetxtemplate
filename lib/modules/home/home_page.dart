@@ -30,19 +30,19 @@ class HomePage extends GetWidget<HomeController> {
               },
             ),
             ListTile(
+              leading: Icon(Icons.switch_left),
+              title: Text('Modo oscuro'),
+              onTap: () {
+                GetStorageKey().changeThemeMode();
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Cerrar sesion'),
               onTap: () {
                 Get.find<LoginController>().logOut();
               },
             ),
-            ListTile(
-              leading: Icon(Icons.switch_left),
-              title: Text('Modo oscuro'),
-              onTap: () {
-                GetStorageKey().changeThemeMode();
-              },
-            )
           ],
         ),
       ),

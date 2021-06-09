@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mygetxtemplate/core/theme/custom_textStyle.dart';
+import 'package:mygetxtemplate/core/theme/custom_color.dart';
 import 'package:mygetxtemplate/global_widgets/custom_text.dart';
-//import 'package:mygetxtemplate/modules/login/login_controller.dart';
 import 'package:mygetxtemplate/modules/login/login_controller.dart';
-//import 'package:mygetxtemplate/modules/login/login_controller_prueba.dart';
-
-//import 'login_controller.dart';
 
 class LoginPage extends GetWidget<LoginController> {
   @override
@@ -15,6 +11,12 @@ class LoginPage extends GetWidget<LoginController> {
         body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        buildText(
+          data: 'Bienvenido',
+          color: CustomColor().blackAndWhiteColor,
+          size: 40,
+        ),
+        SizedBox(height: 60),
         TextField(
           controller: controller.email,
           decoration: InputDecoration(
@@ -39,15 +41,17 @@ class LoginPage extends GetWidget<LoginController> {
             controller.signInWithEmailAndPassword();
             //controller.setInitialScreen();
           },
-          child: CustomText(
+          child: buildText(
             data: 'Iniciar Sesión',
-            textStyle: CustomTextStyle().textStyle16WithThemeColor,
+            color: CustomColor().primaryTextColor,
+            size: 16,
           ),
         ),
         SizedBox(height: 20),
-        CustomText(
-          data: 'Puedes iniciar con',
-          textStyle: CustomTextStyle().textStyleTwelveWithGreyColor,
+        buildText(
+          data: 'Puede iniciar sesion con',
+          color: CustomColor().secondaryTextColor,
+          size: 12,
         ),
         SizedBox(height: 20),
         TextButton(
