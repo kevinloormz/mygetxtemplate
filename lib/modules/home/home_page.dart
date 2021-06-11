@@ -8,7 +8,6 @@ import 'package:mygetxtemplate/modules/login/login_controller.dart';
 class HomePage extends GetWidget<HomeController> {
   @override
   Widget build(BuildContext context) {
-    LoginController controller = Get.find();
     return Scaffold(
       appBar: AppBar(
         title: Text('Shop'),
@@ -18,8 +17,8 @@ class HomePage extends GetWidget<HomeController> {
         child: ListView(
           children: [
             UserAccountsDrawerHeader(
-              accountName: Text('${controller.user!.displayName}'),
-              accountEmail: Text('${controller.user!.email}'),
+              accountName: Text('${controller.userName}'),
+              accountEmail: Text('${controller.emailUser}'),
             ),
             ListTile(
               leading: Icon(Icons.book),
