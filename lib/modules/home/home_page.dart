@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:mygetxtemplate/core/utils/getStoragedKey.dart';
 //import 'package:mygetxtemplate/global_widgets/custom_text.dart';
 import 'package:mygetxtemplate/modules/home/home_controller.dart';
 import 'package:mygetxtemplate/modules/login/login_controller.dart';
+//import 'dart:async';
 
 class HomePage extends GetWidget<HomeController> {
   @override
@@ -46,7 +48,13 @@ class HomePage extends GetWidget<HomeController> {
           ],
         ),
       ),
-      body: Container(),
+      body: GoogleMap(
+        onMapCreated: controller.onMapCreated,
+        initialCameraPosition: CameraPosition(
+          target: controller.center,
+          zoom: 11.0,
+        ),
+      ),
     );
   }
 }

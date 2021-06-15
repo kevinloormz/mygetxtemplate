@@ -1,4 +1,5 @@
 //import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class LoginController extends GetxController {
 
   //String? get user => _user.value?.email;
   User? get user => _user.value;
+  CollectionReference users = FirebaseFirestore.instance.collection('users');
 
   @override
   void onInit() {
@@ -101,5 +103,12 @@ class LoginController extends GetxController {
     Get.lazyPut(() => InitialController());
     Get.lazyPut(() => LoginController());
     Get.toNamed(Routes.INITIAL);
+  }
+
+  Future<void> addUser() {
+    return users
+        .add({'full name': 'kevin', 'company': 'hitss', 'age': '20'})
+        .then((value) => print('User added'))
+        .catchError((error) => print('Failed'));
   }
 }

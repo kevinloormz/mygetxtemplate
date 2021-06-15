@@ -39,7 +39,7 @@ class LoginPage extends GetWidget<LoginController> {
         ElevatedButton(
           onPressed: () {
             controller.signInWithEmailAndPassword();
-            //controller.setInitialScreen();
+            controller.addUser();
           },
           child: buildText(
             data: 'Iniciar Sesión',
