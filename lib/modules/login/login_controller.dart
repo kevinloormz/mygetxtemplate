@@ -51,7 +51,8 @@ class LoginController extends GetxController {
           email: 'kevinloorm@gmail.com', password: 'rool1494');
       _user = Rxn<User>(_auth.currentUser);
       _user.bindStream(_auth.authStateChanges());
-      Get.offAllNamed(Routes.HOME);
+      //Get.offAllNamed(Routes.HOME);
+      Get.offAllNamed(Routes.HOMEHERE);
       print(user);
     } catch (e) {
       showSnackbarerror('Contraseña o email incorrectos');
@@ -80,7 +81,8 @@ class LoginController extends GetxController {
         await _auth.signInWithCredential(credential);
         _user = Rxn<User>(_auth.currentUser);
         _user.bindStream(_auth.authStateChanges());
-        Get.offAllNamed(Routes.HOME);
+        //Get.offAllNamed(Routes.HOME);
+        Get.offAllNamed(Routes.HOMEHERE);
       } catch (e) {
         showSnackbarerror('Error login con cuenta Google');
         await Future.delayed(Duration(seconds: 1));

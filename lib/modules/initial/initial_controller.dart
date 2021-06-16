@@ -9,7 +9,8 @@ class InitialController extends GetxController {
 
     if (Get.find<LoginController>().user != null) {
       //return HomePage();
-      Get.offAllNamed(Routes.HOME);
+      //Get.offAllNamed(Routes.HOME);
+      Get.offAllNamed(Routes.HOMEHERE);
     } else {
       //return LoginPage();
       Get.offAllNamed(Routes.LOGIN);
